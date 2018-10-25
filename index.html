@@ -98,7 +98,7 @@
     root: '/',
     scheme: 'Muse',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -190,6 +190,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -237,7 +247,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caotengda">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -327,7 +337,7 @@
           
             <p>[TOC]</p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天在自己win10上搭建了Hexo博客，这是我第一篇博客，所以主要目的仅仅是验证测试。之前自己也在自己的服务器上搭建了wordpress，虽然搭建不是很难，而且搭建后几乎不会像Hexo这样使用命令行控制，但是wordpress使用中感觉很臃肿，markdown编辑支持也不是很好。</p>
-<p>主要参照<a href="https://www.dingxuewen.com/2017/05/15/reprinted-how-to-build-a-blog-with-hexo/" target="_blank" rel="noopener">这篇文章：从零开始使用 Hexo 搭建博客</a></p>
+<h2 id="参照网站"><a href="#参照网站" class="headerlink" title="参照网站"></a>参照网站</h2><p>贴出主要的参照网站，方便以后维护。<br>搭建过程主要参照<a href="https://www.dingxuewen.com/2017/05/15/reprinted-how-to-build-a-blog-with-hexo/" target="_blank" rel="noopener">这篇文章：从零开始使用 Hexo 搭建博客</a><br>使用主题为<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">Next</a>,官网中有该主题的具体美化方法，包括字体字号、打赏功能等等。介绍清晰，感兴趣的可以看看。</p>
 <h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><ol>
 <li>简单，该有的功能都有，专注于写内容。</li>
 <li>基于github，所以不担心丢失，每个版本都能恢复。</li>
@@ -348,9 +358,9 @@
     
     
     
-	<div align="center">
+	
     
-	</div>
+	
     
 
     
@@ -393,7 +403,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caotengda">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -476,9 +486,9 @@
     
     
     
-	<div align="center">
+	
     
-	</div>
+	
     
 
     
@@ -538,6 +548,8 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpeg" alt="caotengda">
+            
               <p class="site-author-name" itemprop="name">caotengda</p>
               <p class="site-description motion-element" itemprop="description">自己的各种折腾</p>
           </div>
@@ -570,10 +582,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">2</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
