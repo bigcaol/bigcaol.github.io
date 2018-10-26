@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Bigcaol&#39;s Blog">
 <meta property="og:description" content="0.假设基本信息假设外网主机 B 的 ip 是 110.73.180.212，拥有一个名为 userB 的用户，ssh 对外暴露的端口号是 4086内网主机A：我们想要连接的主机，userA，SSH端口22 1.内网A免密码连接公网B1ssh-keygen   #生成密钥 1cat .ssh/id_rsa.pub  #查看是否生成了密钥 123ssh-copy-id -i .ssh/id_rsa.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-26T12:24:37.624Z">
+<meta property="og:updated_time" content="2018-10-26T12:32:28.320Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ssh连接内网主机A">
 <meta name="twitter:description" content="0.假设基本信息假设外网主机 B 的 ip 是 110.73.180.212，拥有一个名为 userB 的用户，ssh 对外暴露的端口号是 4086内网主机A：我们想要连接的主机，userA，SSH端口22 1.内网A免密码连接公网B1ssh-keygen   #生成密钥 1cat .ssh/id_rsa.pub  #查看是否生成了密钥 123ssh-copy-id -i .ssh/id_rsa.">
@@ -320,6 +320,8 @@
 <h2 id="3-在内网A上配置反向隧道"><a href="#3-在内网A上配置反向隧道" class="headerlink" title="3.在内网A上配置反向隧道"></a>3.在内网A上配置反向隧道</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -N -f -R 1111:localhost:22 userB@110.73.180.212 -p 4086</span><br><span class="line"><span class="comment"># -N 参数表明我们只做端口转发，而不执行远程命令。</span></span><br><span class="line"><span class="comment"># -R 1111:localhost:22 则表明当有人试图用 1111 端口来连接主机 B 的时候，就把它转发给主机 A 的 22 端口（即主机 A 的本地 ssh 端口）。1111可以更改为不冲突的任意端口</span></span><br><span class="line"><span class="comment"># -f 参数，只是指定 ssh 在后台运行而已。</span></span><br><span class="line"><span class="comment"># -p</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">autossh -M 1122 -N -f -R 1111:localhost:22 userB@110.73.180.212 -p 4086</span><br><span class="line"><span class="comment"># 仅多了一个-M参数，这个参数的意思就是用本机的2222端口来监听ssh，每当他断了就重新把他连起来</span></span><br><span class="line"><span class="comment"># 若autossh未安装，先安装</span></span><br><span class="line">sudo apt-get install autossh</span><br></pre></td></tr></table></figure>
 <h2 id="最后在其他机器上连接内网A"><a href="#最后在其他机器上连接内网A" class="headerlink" title="最后在其他机器上连接内网A"></a>最后在其他机器上连接内网A</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh userA@110.73.180.212 -p 1122 <span class="comment">#登录内网机器A</span></span><br><span class="line"><span class="comment"># userA是主机A上的一个用户</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>-<a href="https://www.synscope.com/1066/外网主机通过ssh连接局域网主机/" target="_blank" rel="noopener">外网主机通过 ssh 连接局域网主机</a><br>-<a href="https://blog.mythsman.com/2017/01/14/1/" target="_blank" rel="noopener">利用反向ssh从外网访问内网主机</a><br>-<a href="https://blog.csdn.net/MasonQAQ/article/details/78190400" target="_blank" rel="noopener">SSH内网穿透的N种姿势</a></p>
 
       
     </div>
@@ -516,7 +518,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-假设基本信息"><span class="nav-number">1.</span> <span class="nav-text">0.假设基本信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-内网A免密码连接公网B"><span class="nav-number">2.</span> <span class="nav-text">1.内网A免密码连接公网B</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-修改外网主机B允许ssh转发"><span class="nav-number">3.</span> <span class="nav-text">2.修改外网主机B允许ssh转发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-在内网A上配置反向隧道"><span class="nav-number">4.</span> <span class="nav-text">3.在内网A上配置反向隧道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后在其他机器上连接内网A"><span class="nav-number">5.</span> <span class="nav-text">最后在其他机器上连接内网A</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-假设基本信息"><span class="nav-number">1.</span> <span class="nav-text">0.假设基本信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-内网A免密码连接公网B"><span class="nav-number">2.</span> <span class="nav-text">1.内网A免密码连接公网B</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-修改外网主机B允许ssh转发"><span class="nav-number">3.</span> <span class="nav-text">2.修改外网主机B允许ssh转发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-在内网A上配置反向隧道"><span class="nav-number">4.</span> <span class="nav-text">3.在内网A上配置反向隧道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后在其他机器上连接内网A"><span class="nav-number">5.</span> <span class="nav-text">最后在其他机器上连接内网A</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">5.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
             
 
           </div>
