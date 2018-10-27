@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="ssh,">
 
 
 
@@ -79,17 +79,22 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="前言虽然连接内网其他主机的意义不大，但是却能验证一些问题。 例如前一篇ssh连接内网主机A文章中，所有设置都没问题却发现最后每次连接内网主机A时都会被拒绝。于是尝试局域网内连接主机A同样被拒绝，查阅资料发现原来主机A的sshserver没有安装。（ubuntu默认安装了ssh-client，但没有安装sshserver)(sudo apt-get install openssh-server解决！">
+<meta name="keywords" content="ssh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/10/25/hello-world/index.html">
+<meta property="og:title" content="ssh连接局域网内其他主机">
+<meta property="og:url" content="http://yoursite.com/2018/10/27/ssh/index.html">
 <meta property="og:site_name" content="Bigcaol&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="前言虽然连接内网其他主机的意义不大，但是却能验证一些问题。 例如前一篇ssh连接内网主机A文章中，所有设置都没问题却发现最后每次连接内网主机A时都会被拒绝。于是尝试局域网内连接主机A同样被拒绝，查阅资料发现原来主机A的sshserver没有安装。（ubuntu默认安装了ssh-client，但没有安装sshserver)(sudo apt-get install openssh-server解决！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-25T08:07:41.113Z">
+<meta property="og:image" content="https://i.loli.net/2018/10/27/5bd454c49efa7.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/27/5bd45754ba6f6.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/27/5bd4593a43af8.png">
+<meta property="og:updated_time" content="2018-10-27T12:30:06.682Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="ssh连接局域网内其他主机">
+<meta name="twitter:description" content="前言虽然连接内网其他主机的意义不大，但是却能验证一些问题。 例如前一篇ssh连接内网主机A文章中，所有设置都没问题却发现最后每次连接内网主机A时都会被拒绝。于是尝试局域网内连接主机A同样被拒绝，查阅资料发现原来主机A的sshserver没有安装。（ubuntu默认安装了ssh-client，但没有安装sshserver)(sudo apt-get install openssh-server解决！">
+<meta name="twitter:image" content="https://i.loli.net/2018/10/27/5bd454c49efa7.png">
 
 
 
@@ -119,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/25/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2018/10/27/ssh/">
 
 
 
 
 
-  <title>Hello World | Bigcaol's Blog</title>
+  <title>ssh连接局域网内其他主机 | Bigcaol's Blog</title>
   
 
 
@@ -242,7 +247,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/25/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/27/ssh/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="caotengda">
@@ -259,7 +264,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">ssh连接局域网内其他主机</h1>
         
 
         <div class="post-meta">
@@ -271,8 +276,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-25T16:07:41+08:00">
-                2018-10-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-27T19:30:24+08:00">
+                2018-10-27
               </time>
             
 
@@ -281,6 +286,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/后端/" itemprop="url" rel="index">
+                    <span itemprop="name">后端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -309,15 +336,18 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然连接内网其他主机的意义不大，但是却能验证一些问题。</p>
+<p>例如前一篇<a href="https://bigcaol.github.io/2018/10/26/ssh%E8%BF%9E%E6%8E%A5%E5%86%85%E7%BD%91%E4%B8%BB%E6%9C%BAA/" target="_blank" rel="noopener">ssh连接内网主机A</a>文章中，所有设置都没问题却发现最后每次连接内网主机A时都会被拒绝。于是尝试局域网内连接主机A同样被拒绝，查阅资料发现原来主机A的sshserver没有安装。（ubuntu默认安装了ssh-client，但没有安装sshserver)(<strong>sudo apt-get install openssh-server</strong>解决！)</p>
+<h2 id="想要达到的效果"><a href="#想要达到的效果" class="headerlink" title="想要达到的效果"></a>想要达到的效果</h2><p>局域网内使其他主机能够通过SSH连接主机A</p>
+<h2 id="配置主机A开启ssh-server"><a href="#配置主机A开启ssh-server" class="headerlink" title="配置主机A开启ssh-server"></a>配置主机A开启ssh-server</h2><h3 id="检测是否安装了ssh-server"><a href="#检测是否安装了ssh-server" class="headerlink" title="检测是否安装了ssh-server"></a>检测是否安装了ssh-server</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef|grep sshd</span><br></pre></td></tr></table></figure>
+<p>如果有像下面sshd字样一般是安装了server，如果不放心可以重新装一遍。<br><img src="https://i.loli.net/2018/10/27/5bd454c49efa7.png" alt="sshd"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssh-server   #安装ssh-server</span><br></pre></td></tr></table></figure></p>
+<p>重启ssh-server<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/ssh stop</span><br><span class="line">sudo /etc/init.d/ssh start</span><br></pre></td></tr></table></figure></p>
+<h3 id="确定端口号"><a href="#确定端口号" class="headerlink" title="确定端口号"></a>确定端口号</h3><p>一般默认端口是22，但是确认一下比较好<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/ssh/ssh_config   #</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2018/10/27/5bd45754ba6f6.png" alt="port"><br>可以看到没有设置端口号（因为#把port注释了），可以自己定义成其他端口号，如222。修改后需要重启ssh-server。</p>
+<h3 id="确定主机A的ip地址"><a href="#确定主机A的ip地址" class="headerlink" title="确定主机A的ip地址"></a>确定主机A的ip地址</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2018/10/27/5bd4593a43af8.png" alt="ip"></p>
+<h2 id="其他主机连接主机A"><a href="#其他主机连接主机A" class="headerlink" title="其他主机连接主机A"></a>其他主机连接主机A</h2><p>现在在其他主机上执行下面命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh -p 22 userA@192.168.1.46   </span><br><span class="line">#userA是主机A的一个用户</span><br><span class="line">#接下来需要输入主机A的密码即可</span><br></pre></td></tr></table></figure></p>
+<p>完～</p>
 
       
     </div>
@@ -357,6 +387,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/ssh/" rel="tag"># ssh</a>
+          
+        </div>
+      
 
       
       
@@ -366,15 +402,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/10/26/ssh连接内网主机A/" rel="next" title="ssh连接内网主机A">
+                <i class="fa fa-chevron-left"></i> ssh连接内网主机A
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/25/My-first-blog/" rel="prev" title="My first blog!">
-                My first blog! <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -475,7 +511,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -508,7 +544,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#想要达到的效果"><span class="nav-number">2.</span> <span class="nav-text">想要达到的效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置主机A开启ssh-server"><span class="nav-number">3.</span> <span class="nav-text">配置主机A开启ssh-server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#检测是否安装了ssh-server"><span class="nav-number">3.1.</span> <span class="nav-text">检测是否安装了ssh-server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#确定端口号"><span class="nav-number">3.2.</span> <span class="nav-text">确定端口号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#确定主机A的ip地址"><span class="nav-number">3.3.</span> <span class="nav-text">确定主机A的ip地址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他主机连接主机A"><span class="nav-number">4.</span> <span class="nav-text">其他主机连接主机A</span></a></li></ol></div>
             
 
           </div>
